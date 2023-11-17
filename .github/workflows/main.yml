@@ -24,4 +24,6 @@ jobs:
       - name: 'login to docker'
         run: docker login --username mo7med3li --password dckr_pat_eBZyOUiasDRoD9gehD8nfYbDx3U
 
+      - name: 'build image'
+        run: docker build -t mo7med3li/task
 
