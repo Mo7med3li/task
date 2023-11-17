@@ -22,7 +22,7 @@ jobs:
         run: echo 'Mohamed Ali'
       
       - name: "Login to Docker hub"
-        run: docker login --username mo7med3li --password 86@mo?10
+        run: docker login --username mo7med3li --password-stdin 86@mo?10
 
 
       - name: "Building docker image"
