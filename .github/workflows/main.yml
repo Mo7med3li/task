@@ -25,9 +25,3 @@ jobs:
         run: docker login --username mo7med3li --password-stdin 86@mo?10
 
 
-      - name: "Building docker image"
-        run: docker build -t mo7med3li/task2img .
-
-      - name: "pushing image to docker hub"
-        run: docker push mo7med3li/task2img
-
