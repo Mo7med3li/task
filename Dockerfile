@@ -6,7 +6,9 @@ COPY test.js /app/test.js
 
 copy test.js .
 
-RUN apk add --update $(which nodejs)
+RUN apk update && apk upgrade
+
+RUN apk add --update nodejs
 
 RUN apk add --update npm
 
