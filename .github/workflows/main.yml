@@ -21,6 +21,7 @@ jobs:
       - name: 'Testing Printing'
         run: echo 'Mohamed Ali'
       
-      
+      - name: 'login to docker'
+        run: docker login --username mo7med3li --password dckr_pat_eBZyOUiasDRoD9gehD8nfYbDx3U
 
 
