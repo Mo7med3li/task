@@ -22,7 +22,7 @@ jobs:
         run: echo 'Mohamed Ali'
       
       - name: "Login to Docker hub"
-        run: docker login --username mo7med3li--password ${{secrets.DOCKER_TOKEN}}
+        run: docker login --username mo7med3li --password ${{secrets.DOCKER_TOKEN}}
 
 
       - name: "Building docker image"
