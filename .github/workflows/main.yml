@@ -1,1 +1,33 @@
+on:
+  push:
+    branches:
+      - master
+
+
+
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+        
+      - uses: actions/checkout@v3  
+
+      - name: 'printing folder contents'
+        run: ls
+
+      - name: 'Testing Printing'
+        run: echo 'Mohamed Ali'
+      
+      - name: "Login to Docker hub"
+        run: docker login --username mo7med3li--password ${{secrets.DOCKER_TOKEN}}
+
+
+      - name: "Building docker image"
+        run: docker build -t mo7med3li/task2img .
+
+      - name: "pushing image to docker hub"
+        run: docker push mo7med3li/task2img
 
