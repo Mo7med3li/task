@@ -1,12 +1,15 @@
-FROM openjdk
+FROM openjdk 
 
 WORKDIR /app
 
 COPY test.js /app/test.js
-COPY test.js .
 
-RUN javac test.js
+copy test.js .
+
+RUN apk add --update nodejs
+
+RUN apk add --update npm
 
 RUN npm install express
 
-CMD java test
+CMD node test.js
